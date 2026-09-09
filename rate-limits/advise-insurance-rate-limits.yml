@@ -1,0 +1,17 @@
+generated: '2026-09-09'
+method: searched
+source: https://www.bloomthrives.com/ (full site + page-sitemap.xml reviewed 2026-09-09)
+limit_count: 0
+rate_limits: []
+applicability: na-no-api-surface
+note: >-
+  HONEST ZERO, and for the strongest possible reason: there is no API. Advise Insurance /
+  Bloom publishes no developer portal, no API reference and no machine-readable contract,
+  so there is no documented limit, window, burst, exhaustion status code or RateLimit-* /
+  Retry-After response header to record. Not a gap in the docs — a gap in the product
+  surface.
+  DELIBERATELY EMITTED AS AN EMPTY LIST, AND WITH NO `RateLimits` POINTER IN apis.yml.
+  score.rb evaluates rate_limit_signal as `has_type(p, "RateLimits") || Array(p["rate_limits"]).any?`
+  and awards 0.5 x 7 pts on either. A populated one-entry list saying "there are no limits"
+  would therefore have scored 3.5 agent-readiness points for a company with nothing to
+  rate-limit. Recording the absence must not read as a presence.

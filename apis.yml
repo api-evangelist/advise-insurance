@@ -1,17 +1,35 @@
 aid: advise-insurance
 name: Advise Insurance
-description: 'Advise Insurance is a company surfaced via the API Evangelist harvest backlog (source: secondary-market)
-  and added to the network as a stub for full-pipeline profiling.'
+description: 'Advise Insurance is the Medicare distribution business of Advise Health
+  Holdings, a Bloomington, Indiana company founded in 2018 by Sherman Rogers that raised
+  a $100M growth round led by Oak HC/FT in March 2021. It operates as a Medicare concierge
+  agency — unbiased plan comparison and enrollment help for seniors, plus managed-care
+  growth support for physician practices — and its operating brand today is Bloom
+  (bloomthrives.com), the Medicare telesales, quoting, enrollment and health-activation
+  business Rogers launched in 2007. Bloom sells the Ascend platform (Ascend Quote &
+  Enroll, Ascend Broker, Health Activations) to national and regional health plans on a
+  white-label basis. As of 2026-09-09 the company publishes no developer portal, no API
+  documentation and no machine-readable API contract; adviseinsurance.com no longer
+  serves a site of its own and resolves into the bloomthrives.com WordPress multisite.'
 url: https://raw.githubusercontent.com/api-evangelist/advise-insurance/refs/heads/main/apis.yml
+image: https://kinlane-productions2.s3.amazonaws.com/apis-json/apis-json-logo.jpg
 x-type: company
 x-source: harvest:secondary-market
-x-tier: stub
-x-tier-reason: harvest
+x-tier: profiled
+x-tier-reason: enrichment-pass-2026-09-09
+position: Producing
 specificationVersion: '0.20'
 created: '2026-09-09'
 modified: '2026-09-09'
 tags:
 - Company
+- Insurance
+- Health Insurance
+- Medicare
+- Health Care
+- Insurtech
+- Enrollment
+- Telesales
 apis: []
 maintainers:
 - FN: Kin Lane
@@ -19,5 +37,52 @@ maintainers:
 - FN: APIs.json
   email: info@apis.io
 common:
+- type: DomainSecurity
+  url: security/advise-insurance-domain-security.yml
 - type: Website
-  url: https://www.nasdaqprivatemarket.com/
+  url: https://www.bloomthrives.com/
+- type: TermsOfService
+  url: https://www.bloomthrives.com/terms-of-service/
+- type: PrivacyPolicy
+  url: https://www.bloomthrives.com/privacy-policy/
+- type: Support
+  url: https://www.bloomthrives.com/contact-us/
+- type: Blog
+  url: https://www.bloomthrives.com/insights/
+- type: Pricing
+  url: https://www.bloomthrives.com/enroll/pricing/
+- type: LLMsTxt
+  url: llms/advise-insurance-llms.txt
+- type: Plans
+  url: plans/advise-insurance-plans-pricing.yml
+x-enrichment:
+  date: '2026-09-09'
+  status: minimal
+  artifacts_added: 5
+  pass: local-v3
+x-coverage:
+  state: none
+  reason: no-developer-program
+  detail: >-
+    Advise Insurance ships real software — the Ascend white-label Medicare quoting,
+    enrollment and health-activation platform, sold to health plans through its operating
+    brand Bloom — but ships it only as an end-user/white-label product: the Ascend page
+    promises to "integrate with the technology and operating platforms you already use
+    through an open system design" while the site carries no developer portal, no API
+    reference and no spec, /developers, /api and /partners all 404, and api., docs.,
+    developer. and ascend.bloomthrives.com do not resolve in DNS at all; the company's own
+    domain adviseinsurance.com no longer serves a site and rewrites every path — including
+    ones that cannot exist — to the bloomthrives.com WordPress multisite signup shell,
+    which is why it answers 200 to everything.
+  evidence:
+  - url: https://www.bloomthrives.com/developers
+    status: 404
+  - url: https://www.bloomthrives.com/openapi.json
+    status: 404
+  - url: https://www.bloomthrives.com/.well-known/api-catalog
+    status: 404
+  - url: https://www.bloomthrives.com/ascend-platform/
+    status: 200
+  - url: https://adviseinsurance.com/.well-known/agent-card.json
+    status: 200
+  checked: '2026-09-09'

@@ -64,5 +64,28 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-Advise Insurance is a company surfaced via the API Evangelist harvest backlog (source: secondary-market) and added to the network as a stub for full-pipeline profiling.
-- https://www.nasdaqprivatemarket.com/
+Advise Insurance is the Medicare distribution business of Advise Health Holdings, a
+Bloomington, Indiana company founded in 2018 by Sherman Rogers that raised a $100M growth
+round led by Oak HC/FT in March 2021. It operates as a Medicare concierge agency —
+unbiased plan comparison and enrollment help for seniors, plus managed-care growth support
+for physician practices — and its operating brand today is **Bloom**
+([bloomthrives.com](https://www.bloomthrives.com/)), the Medicare telesales, quoting,
+enrollment and health-activation business Rogers launched in 2007. Bloom sells the Ascend
+platform (Ascend Quote & Enroll, Ascend Broker, Health Activations) to national and
+regional health plans and distributors on a white-label basis.
+
+**No public API.** As of 2026-09-09 this company publishes no developer portal, no API
+reference and no machine-readable contract of any kind. Every REST/GraphQL/MCP/agent-card,
+`/llms.txt` and `/.well-known/` path probed on `www.bloomthrives.com` returns a hard 404;
+`api.`, `docs.`, `developer.` and `ascend.bloomthrives.com` do not resolve in DNS; and
+`/developers`, `/api` and `/partners` all 404. The company's own domain,
+`adviseinsurance.com`, no longer serves a site of its own — it is rewritten to the
+`bloomthrives.com` WordPress multisite signup shell, which is why it answers HTTP 200 to
+every path, including paths that cannot exist. Those 200s are soft 404s and are recorded
+as misses.
+
+- Website: https://www.bloomthrives.com/
+- Ascend platform: https://www.bloomthrives.com/ascend-platform/
+- Pricing: https://www.bloomthrives.com/enroll/pricing/
+- Contact: https://www.bloomthrives.com/contact-us/
+- Historical domain (parked on the Bloom multisite): https://adviseinsurance.com/

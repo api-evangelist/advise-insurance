@@ -1,0 +1,27 @@
+generated: '2026-09-09'
+method: probed
+source: live DNS/TLS/HTTP probes of apis.yml + OpenAPI hosts
+hosts:
+- host: www.bloomthrives.com
+  https: true
+  tls_version: TLSv1.3
+  cert_expires: Nov 26 09:46:38 2026 GMT
+  hsts: true
+domains:
+- domain: bloomthrives.com
+  dnssec: false
+  caa: []
+  spf: true
+  spf_record: 'v=spf1 Ip4:66.244.115.1 ip4:66.244.115.241 ip4:66.244.115.242 ip4:65.111.246.2 ip4:65.111.246.3 include:spf.protection.outlook.com -all'
+  dmarc: true
+  dmarc_policy: quarantine
+  notes:
+  - 'SPF re-probed by hand 2026-09-09 after the scripted dig returned an empty TXT
+    set on the first try; the apex publishes a v=spf1 record ending -all. Note the
+    record begins Ip4: (capital I) on the first mechanism, which some strict parsers
+    reject.'
+  - 'A stray v=DMARC1; p=reject; adkim=s; aspf=s TXT record is published at the APEX
+    (bloomthrives.com) in addition to the correct one at _dmarc.bloomthrives.com
+    (p=quarantine; pct=100). Apex DMARC records are not read by receivers; the
+    effective policy is quarantine.'
+  - 'No DNSKEY and no CAA records observed for bloomthrives.com.'

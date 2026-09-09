@@ -1,0 +1,100 @@
+generated: '2026-09-09'
+method: probed
+source: live HTTPS probes of every host this record knows (2026-09-09)
+note: >-
+  Recorded ABSENCE. Every named /.well-known/ path was probed on both hosts and none
+  returned a real document, so no WellKnown or SecurityTxt pointer is wired into
+  apis.yml. adviseinsurance.com is a special case worth reading carefully: it answers
+  HTTP 200 to EVERY path, including paths that cannot exist, because the domain no
+  longer serves a site of its own and every request is rewritten to
+  https://www.bloomthrives.com/wp-signup.php?new=<host> — the WordPress multisite
+  "this site does not exist, sign up" shell. The 200s below are therefore soft-404s,
+  not documents, and are recorded as misses.
+hosts:
+- host: www.bloomthrives.com
+  role: operating brand website (Bloom), the live surface of Advise Health Holdings
+  documents:
+  - path: /.well-known/security.txt
+    status: 404
+  - path: /.well-known/openid-configuration
+    status: 404
+  - path: /.well-known/oauth-authorization-server
+    status: 404
+  - path: /.well-known/oauth-protected-resource
+    status: 404
+  - path: /.well-known/api-catalog
+    status: 404
+  - path: /.well-known/ai-plugin.json
+    status: 404
+  - path: /.well-known/aauth-resource.json
+    status: 404
+  - path: /.well-known/agent-card.json
+    status: 404
+  - path: /.well-known/agent.json
+    status: 404
+  - path: /.well-known/mcp.json
+    status: 404
+- host: adviseinsurance.com
+  role: the company's own historical domain; now parked on the bloomthrives.com multisite
+  soft_404: true
+  soft_404_evidence: >-
+    Every path returns HTTP 200 with an identical 81,378-byte HTML body whose final URL
+    is https://www.bloomthrives.com/wp-signup.php?new=adviseinsurance.com and whose
+    title is "Bloom: Connecting People to Great Medicare Insurance Plans". Treated as a
+    miss on every path.
+  documents:
+  - path: /.well-known/security.txt
+    status: 200
+    result: soft-404 HTML shell, not a document
+    real_document: false
+    content_type: text/html
+  - path: /.well-known/openid-configuration
+    status: 200
+    result: soft-404 HTML shell, not a document
+    real_document: false
+    content_type: text/html
+  - path: /.well-known/oauth-authorization-server
+    status: 200
+    result: soft-404 HTML shell, not a document
+    real_document: false
+    content_type: text/html
+  - path: /.well-known/oauth-protected-resource
+    status: 200
+    result: soft-404 HTML shell, not a document
+    real_document: false
+    content_type: text/html
+  - path: /.well-known/api-catalog
+    status: 200
+    result: soft-404 HTML shell, not a document
+    real_document: false
+    content_type: text/html
+  - path: /.well-known/ai-plugin.json
+    status: 200
+    result: soft-404 HTML shell, not a document
+    real_document: false
+    content_type: text/html
+  - path: /.well-known/aauth-resource.json
+    status: 200
+    result: soft-404 HTML shell, not a document
+    real_document: false
+    content_type: text/html
+  - path: /.well-known/agent-card.json
+    status: 200
+    result: soft-404 HTML shell, not a document
+    real_document: false
+    content_type: text/html
+  - path: /.well-known/agent.json
+    status: 200
+    result: soft-404 HTML shell, not a document
+    real_document: false
+    content_type: text/html
+  - path: /.well-known/mcp.json
+    status: 200
+    result: soft-404 HTML shell, not a document
+    real_document: false
+    content_type: text/html
+summary:
+  hosts_probed: 2
+  paths_probed: 20
+  real_documents_found: 0
+  pointer_emitted: false

@@ -1,0 +1,44 @@
+generated: '2026-09-09'
+method: searched
+source: https://www.bloomthrives.com/enroll/pricing/
+plans:
+- plan_count: 0
+  note: >-
+    ZERO API PLANS. Advise Insurance / Bloom publishes no API, so it publishes no API
+    plans, quotas or overage pricing. The pricing page that does exist prices the Ascend
+    white-label enrollment SOFTWARE, sold to health plans and distributors through a
+    sales motion — not metered API access. It is recorded below under product_tiers so
+    the finding is not lost, and deliberately NOT counted as plans, because counting it
+    would credit this company with API plans it does not publish.
+product_tiers:
+  scope: Ascend white-label enrollment platform (not an API product)
+  source: https://www.bloomthrives.com/enroll/pricing/
+  source_status: 200
+  pricing_model: contact-sales
+  published_prices: false
+  tiers:
+  - name: Essential
+    price: null
+    currency: null
+    billing_period: null
+    cta: Request Pricing
+    included: >-
+      Reliable quoting and enrollment software that's quick to implement and easy to
+      manage.
+  - name: Growth
+    price: null
+    currency: null
+    billing_period: null
+    cta: Request Pricing
+    included: >-
+      More data-collection options, flexible workflows, and integration opportunities.
+  - name: Enterprise
+    price: null
+    currency: null
+    billing_period: null
+    cta: Request Pricing
+    included: 'Maximum flexibility, integration, and control.'
+  note: >-
+    All three tiers show a "Request Pricing" button and the page closes with "Contact us
+    to learn more or set up a demo today." No price, currency, billing period, per-unit
+    rate, overage, quota or limit is published for any tier.
