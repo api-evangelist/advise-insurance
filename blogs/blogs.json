@@ -2,7 +2,7 @@
   "repo": "advise-insurance",
   "feeds": [
     {
-      "source": "https://www.bloomthrives.com/contact-us/",
+      "source": "https://www.bloomthrives.com/insights/",
       "feed_url": "https://www.bloomthrives.com/feed/",
       "title": "",
       "saved": 0,
@@ -17,5 +17,5 @@
     }
   ],
   "post_count": 6,
-  "fetched": "2026-10-03T12:30:02Z"
+  "fetched": "2026-10-10T13:15:00Z"
 }
